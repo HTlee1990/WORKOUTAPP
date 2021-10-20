@@ -1,14 +1,14 @@
 import { BrowserRouter, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
-import Login from "./components/Login";
-import Callback from "./controller/Callback";
+import Login from "./components/login/Login";
+import Header from "./components/header/Header";
 import "./App.css";
 
 function App() {
   return (
     <BrowserRouter>
-      <LandingPage exact path="/" />
-      {/* <Route path="/callback" component={Callback} /> */}
+      <Header />
+      <Route exact path="/" component={LandingPage} />
       <Route path="/login" component={Login} />
     </BrowserRouter>
   );

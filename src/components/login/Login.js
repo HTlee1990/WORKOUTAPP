@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import axios from "axios";
-import Modal from "../UI/Modal";
+import Modal from "../../UI/Modal";
 import "./Login.scss";
 
 const ENDPOINT = process.env.REACT_APP_ENDPOINT;
@@ -9,11 +9,10 @@ const Login = () => {
   const loginHandler = (e) => {
     e.preventDefault();
   };
-
   //1. 구글 소셜로그인 버튼 클릭 -> 코드 받아오기
   const googleHandler = () => {
     window.location.assign(
-      `https://accounts.google.com/o/oauth2/v2/auth?client_id=${GOOGLE_CLIENT_ID}&response_type=code&scope=openid email&redirect_uri=http://localhost:3000/login`
+      `https://accounts.google.com/o/oauth2/v2/auth?client_id=${GOOGLE_CLIENT_ID}&response_type=code&scope=openid email&redirect_uri=${ENDPOINT}/login`
     );
   };
 
