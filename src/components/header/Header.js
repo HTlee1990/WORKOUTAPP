@@ -14,26 +14,11 @@ const Header = () => {
   return (
     <div className="header__container">
       <div className="nav__logo">This is Logo</div>
-      <div className="nav__items__container" onClick={navHandler}>
-        <div className={clicked ? "nav__items spreaded" : "nav__items"}>
-          <Blob1 className="blob" width="120" height="120" />
-          <p className="item__text">menu1</p>
-        </div>
-        <div className={clicked ? "nav__items spreaded" : "nav__items"}>
-          <Blob2 className="blob" width="120" height="120" />
-          <p className="item__text">menu2</p>
-        </div>
-        <div className={clicked ? "nav__items spreaded" : "nav__items"}>
-          <Blob3 className="blob" width="120" height="120" />
-          <p className="item__text">menu3</p>
-        </div>
-        <div className={clicked ? "nav__items spreaded" : "nav__items"}>
-          <Blob4 className="blob" width="120" height="120" />
-          <p className="item__text">Login</p>
-        </div>
-        <div className={clicked ? "nav__items spreaded" : "nav__items"}>
-          <Blob5 className="blob" width="120" height="120" />
-          <p className="item__text">Logout</p>
+      <div className="nav__items__container">
+        <div className="hamburger__container" onClick={navHandler}>
+          <div className={clicked ? "hamburger spreaded" : "hamburger"}></div>
+          <div className={clicked ? "hamburger spreaded" : "hamburger"}></div>
+          <div className={clicked ? "hamburger spreaded" : "hamburger"}></div>
         </div>
       </div>
     </div>

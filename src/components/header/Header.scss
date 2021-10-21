@@ -9,47 +9,46 @@
   .nav__items__container {
     position: relative;
 
-    .nav__items {
-      position: absolute;
-      top: 0%;
-      right: 0%;
-      margin: 0 auto;
+    .hamburger__container {
+      position: relative;
+      margin: 1em;
+      width: 2em;
+      padding: 17px;
       cursor: pointer;
-      display: flex;
-      transition: all 0.7s ease-in;
-      &.spreaded:nth-child(5) {
-        // top: 10%;
-        right: 15rem;
-        transition: all 1s ease-in;
-      }
-      &.spreaded:nth-child(4) {
-        top: 50%;
-        right: 13rem;
-        transition: all 0.7s ease-in 0.2s;
-      }
-      &.spreaded:nth-child(3) {
-        top: 100%;
-        right: 10rem;
-        transition: all 0.7s ease-in 0.5s;
-      }
-      &.spreaded:nth-child(2) {
-        top: 150%;
-        right: 6rem;
-        transition: all 0.7s ease-in 0.8s;
-      }
-      &.spreaded:nth-child(1) {
-        top: 170%;
-        transition: all 0.7s ease-in 1.1s;
-      }
 
-      .item__text {
-        display: none;
-        margin: 0;
-        padding: 0;
+      .hamburger {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        height: 3px;
+        background: darkgray;
+        transition: transform 250ms ease-in-out;
+
+        &:nth-child(1) {
+          top: 6px;
+          width: 17px;
+          left: 0;
+          transform-origin: top left;
+          &.spreaded {
+            transform: rotate(45deg) translateY(-4px) translateX(2px);
+          }
+        }
+        &:nth-child(2) {
+          width: 34px;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          &.spreaded {
+            transform: rotate(-45deg) translateY(-50%);
+          }
+        }
+        &:nth-child(3) {
+          bottom: 6px;
+          right: 0;
+          width: 17px;
+          transform-origin: bottom right;
+          &.spreaded {
+            transform: rotate(45deg) translateY(7px) translateX(-2px);
+          }
+        }
       }
     }
   }
@@ -80,3 +79,53 @@
 //       }
 //     }
 //   }
+
+// .nav__items {
+//   position: absolute;
+//   top: 0%;
+//   right: 0%;
+//   margin: 0 auto;
+//   cursor: pointer;
+//   display: flex;
+//   opacity: 0;
+//   transition: all 0.7s ease-in;
+//   &.spreaded:nth-child(5) {
+//     top: 10%;
+//     right: 15rem;
+//     opacity: 1;
+//     transition: all 1s ease-in;
+//   }
+//   &.spreaded:nth-child(4) {
+//     top: 50%;
+//     right: 13rem;
+//     opacity: 1;
+//     transition: all 0.7s ease-in 0.2s;
+//   }
+//   &.spreaded:nth-child(3) {
+//     top: 100%;
+//     right: 10rem;
+//     opacity: 1;
+//     transition: all 0.7s ease-in 0.5s;
+//   }
+//   &.spreaded:nth-child(2) {
+//     top: 150%;
+//     right: 6rem;
+//     opacity: 1;
+//     transition: all 0.7s ease-in 0.8s;
+//   }
+//   &.spreaded:nth-child(1) {
+//     top: 170%;
+//     opacity: 1;
+//     transition: all 0.7s ease-in 1.1s;
+//   }
+
+//   .item__text {
+//     display: none;
+//     margin: 0;
+//     padding: 0;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//   }
+// }
