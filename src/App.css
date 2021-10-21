@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 html,
 body,
 #root {
@@ -5,6 +8,22 @@ body,
   margin: 0;
   padding: 0;
 }
-* {
-  box-sizing: border-box;
+body {
+  font-family: sans-serif;
+  background: var(--clr-neutral);
+}
+
+li {
+  list-style: none;
+}
+
+:root {
+  --clr-primary: #ee6352;
+  --clr-dark: #333;
+  --clr-neutral: #ddd;
+  --clr-light: #fff;
+}
+
+a {
+  color: var(--clr-primary);
 }
